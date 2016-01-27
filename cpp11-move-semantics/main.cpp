@@ -9,7 +9,8 @@ Box MakeBoxOfCats()
 	Box catbox;
 
 	Cat cat1(L"Furry");
-	catbox.AddCatToBox(cat1);
+	catbox.MoveCatToBox(std::move(cat1));
+	// WARNING! At this point, cat1 has been moved to catbox, so it is no longer valid!
 
 	Cat cat2(L"Purry");
 	catbox.AddCatToBox(cat2);
