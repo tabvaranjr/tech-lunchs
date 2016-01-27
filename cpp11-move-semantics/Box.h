@@ -12,6 +12,7 @@ public:
     ~Box();
 
 	void AddCatToBox(Cat cat);
+	void MoveCatToBox(Cat&& cat);
 
 private:
 	std::vector<Cat> _catbox;
