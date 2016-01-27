@@ -6,9 +6,26 @@
 class Cat
 {
 public:
-    Cat(const std::wstring& name);
+    // Default constructor.
+    Cat();
+
+    // Constructor.
+    explicit Cat(const std::wstring& name);
+
+    // Copy-constructor.
     Cat(const Cat& other);
+
+    // Move constructor
+    Cat(Cat&& other);
+
+    // Destructor.
     ~Cat();
+
+    // Copy assignment operator.
+    Cat& operator=(const Cat& other);
+
+    // Move assignment operator.
+    Cat& operator=(Cat&& other);
 
 private:
 	std::wstring _name;
